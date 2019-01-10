@@ -7,14 +7,14 @@ from flask import render_template, request
 from FlaskWebProject import app
 
 #initialise city list
-cities = ['London']
+
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/home')
 
 def home():
     """Renders the home page."""
-
+    cities = ['London']
     if request.method == 'POST':
         #new_city = request.form.get('city')
         city = request.form.get('city')
